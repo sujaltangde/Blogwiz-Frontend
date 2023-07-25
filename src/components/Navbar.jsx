@@ -66,21 +66,22 @@ export const Navbar = () => {
           <div className='bg-gray-900 h-14 fixed min-w-full flex justify-between pl-3 md:pr-24 
           pr-10 text-white'>
             <div className='md:hidden flex justify-center items-center'>
-                <img src="/images/vite.ico" className='md:h-8 md:w-10 h-8' alt="" />
+              <Link to="/">  <img src="/images/vite.ico" className='md:h-8 md:w-10 h-8' alt="" /> </Link>
               </div>
             <ul className='md:flex hidden gap-7 font-semibold  py-3 justify-center text-2xl'>
               <div className=' '>
-                <img src="/images/vite.ico" className='md:h-8 md:w-10 h-8' alt="" />
+              <Link to="/"> <img src="/images/vite.ico" className='md:h-8 md:w-10 h-8' alt="" /> </Link>
               </div>
               <Link className='hover:text-yellow-300' to="/">Home</Link>
               <Link className='hover:text-yellow-300' to="/Write">Write</Link>
               <Link className='hover:text-yellow-300' to="/MyPosts">My Posts</Link>
               <Link className='hover:text-yellow-300' to="/About">About</Link>
-
-              {/* <li> <Search/> </li> */}
             </ul>
+           
 
             <div className='flex justify-center md:gap-7 gap-3 items-center'>
+            <div className='md:hidden flex'> <Search /> </div>
+                <div className='md:flex hidden '><Search/></div>
               
               <Link to="/User" className={`w-9  h-9  rounded-full bg-cover ${UserToggle ? "flex" : "hidden"}`}>
 
@@ -114,7 +115,7 @@ export const Navbar = () => {
         </div>
         <div className='fixed bg-gray-800 text-white z-50  top-14 opacity-90 w-full'>
           <ul className={`${toggle ? "flex" : "hidden"} md:hidden gap-7 pl-5 py-3 flex-col justify-center items-center  text-2xl`}>
-          {/* <li> <Search /> </li> */}
+         
             <Link onClick={() => setToggle(!toggle)} to={"/"}>Home</Link>
             <Link onClick={() => setToggle(!toggle)} to={"/Write"} >Write</Link>
             <Link onClick={() => setToggle(!toggle)} to={"/MyPosts"} >My Posts</Link>

@@ -1,7 +1,6 @@
 import React, { useEffect,useState } from 'react'
 import { Posts } from '../components/Posts'
 import axios from 'axios'
-import { useLocation } from 'react-router'
 import Host from '../Host'
 import { Link } from 'react-router-dom'
 
@@ -53,9 +52,9 @@ export const MyPosts = () => {
      
          {
           (PostsData.length == 0) && (
-          <div className=' flex justify-center items-center'>
+          <div className=' flex justify-center pt-20 items-center'>
     
-          <p className=''> <img src="/images/load.gif" className='h-14' alt="" /> </p>
+          <p className=''> <img src="/images/load.svg" className='h-28' alt="" /> </p>
           
           </div>
           

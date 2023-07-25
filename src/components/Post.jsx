@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import Host from '../Host'
 
-export const Post = ({ image, title, Desc, createdAt, category, postId }) => {
+export const Post = ({ image, title, Desc, createdAt, user, postId }) => {
     
 
     return (
@@ -20,8 +20,9 @@ export const Post = ({ image, title, Desc, createdAt, category, postId }) => {
                      <p>{title}</p>    
                     </div>
 
-                    <div className=''>
-                        <p className='text-yellow-600 text-center'>{new Date(createdAt).toDateString()}</p>
+                    <div className='flex flex-row justify-between px-2'>
+                        <p className='text-yellow-600'>Author : {user   }</p>
+                        <p className='text-yellow-600 '>{new Date(createdAt).toDateString()}</p>
                     </div>
 
                     <div>
@@ -29,6 +30,8 @@ export const Post = ({ image, title, Desc, createdAt, category, postId }) => {
                             {Desc}
                         </p>
                     </div>
+
+                    
                     </Link>  
                 </div>
             </div>

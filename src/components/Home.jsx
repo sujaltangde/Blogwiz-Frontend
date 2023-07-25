@@ -28,7 +28,7 @@ export const Home = () => {
       (PostsData.length == 0) && (
       <div className='pt-10 flex justify-center items-center'>
 
-      <p className=''> <img src="/images/load.gif" className='h-14' alt="" /> </p>
+      <p className=''> <img src="/images/load.svg" className='h-28' alt="" /> </p>
       
       </div>
       
