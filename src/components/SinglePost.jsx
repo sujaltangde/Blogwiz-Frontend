@@ -46,7 +46,11 @@ export const SinglePost = ({ logUser }) => {
         })
         setOpenAlrt(false)
         setPostDel(true)
-        // console.log("Post deleted",res.data)
+                
+    }
+    if(PostDel){
+        dispatch(setPostDelAlertTrue())
+        return <Navigate to="/" />    
     }
 
     const EditPost = async () => {
@@ -56,9 +60,8 @@ export const SinglePost = ({ logUser }) => {
             title: newTitle,
             desc: newDesc
         })
-        // console.log(res.data)
-        setUpdateMode(false)
         setUpdateAlert(true);
+        setUpdateMode(false)
     }
 
     const openAlr = () => {
@@ -71,10 +74,7 @@ export const SinglePost = ({ logUser }) => {
         }, 3000)
     }
 
-    if (PostDel) {
-        dispatch(setPostDelAlertTrue())
-        return <Navigate to="/" />
-    }
+   
 
     return (
         <>
